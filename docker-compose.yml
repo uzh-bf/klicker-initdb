@@ -1,0 +1,18 @@
+version: "3.1"
+services:
+  initdb:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      APP_SECRET: test
+      MONGO_URL: mongodb
+      MONGO_USER: klicker-initdb
+      MONGO_PASS: klicker-initdb
+  mongodb:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: klicker-initdb
+      MONGO_INITDB_ROOT_PASSWORD: klicker-initdb
+    ports:
+      - "27017:27017"
