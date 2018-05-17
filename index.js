@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
   }
 
   // get a reference to the klicker database
-  const db = client.db('klicker')
+  const db = client.db(process.env.MONGO_DATABASE)
 
   // drop all existing data from the database
   await Promise.all(
