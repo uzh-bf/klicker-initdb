@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
     client = await MongoClient.connect(
       `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${
         process.env.MONGO_URL
-      }:27017`
+      }`
     )
   } catch (e) {
     console.error(e)

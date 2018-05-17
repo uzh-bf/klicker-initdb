@@ -6,7 +6,7 @@ services:
       - "3000:3000"
     environment:
       APP_SECRET: test
-      MONGO_URL: mongodb
+      MONGO_URL: mongodb:27017
       MONGO_USER: klicker-initdb
       MONGO_PASS: klicker-initdb
   mongodb:
